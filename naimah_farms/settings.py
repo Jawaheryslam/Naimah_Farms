@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'naimah_farms.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'naimah_farms_db',
+        'USER': 'naimah_user',
+        'PASSWORD': 'naima63',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
