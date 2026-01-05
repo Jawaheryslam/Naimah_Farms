@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import Goat
+from .serializers import GoatSerializer
 
-# Create your views here.
+
+class GoatViewSet(viewsets.ModelViewSet):
+    queryset = Goat.objects.all()
+    serializer_class = GoatSerializer
